@@ -1,0 +1,24 @@
+@import '../../styles/main';
+$cl: 'navigation';
+
+.#{$cl} {
+    &__container {
+        background-color: $aqua;
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__link {
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $navy;
+        transition: color 0.25s ease-in-out;
+
+        &:hover {
+            color: $gray;
+        }
+    }
+}

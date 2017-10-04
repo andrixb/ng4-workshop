@@ -1,34 +1,30 @@
-# NgModule
-"NgModules are used in order to help us organise our application into choesive block of functionality."
+# Components
 
-Every Ng has at least one module _the root module_ names `AppModule` (N.B. A root module doesn't need to export anything).
-Large applications have usually more _feature modules_.
+Components are the foundantion of modular development. They help to separate our code into easy to manage chunks.
+Components are organised in tree structures.
 
-A module is a class with a `@NgModule` decorator.
+Components can be easily Isolated, Tested and Reused.
 
-Further readings: https://angular.io/guide/ngmodule
+# How to declare and use it?
 
-## How to declare and use it?
-To be able to define modules we have to use the decorator `NgModule` from `@angular/core`.
-`app.module.ts`
+We create a class and export it:
 ```ts
-import { NgModule } from '@angular/core';
+export class MyComponent {
+    pageTitle: string = 'Title';
+}
+```
+We than add the `Component` decorator and import it from `@angular/core`
+```ts
+import { Component } from '@angular/core';
 
-@NgModule({
-  imports: [ ... ],
-  declarations: [ ... ],
-  bootstrap: [ ... ]
+@Component({
+    selector: 'my-component',
+    templateUrl: './my-component.component.html',
+    styleUrls: ['./my-component.component.scss'],
 })
-
-export class AppModule { }
+export class MyComponent {
+    pageTitle: string = 'Title';
+}
 ```
 
-We lunch the app by bootstrapping the root module: 
-
-`main.ts`
-```ts
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
-
-platformBrowserDynamic().bootstrapModule(AppModule);
-```
+We need than to import the component in the App Module and into the declaration section.
