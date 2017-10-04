@@ -1,5 +1,6 @@
-# Angular Starter
-This is a minimal angular4 setup
+# Angular Workshop
+This is based on a minimal angular4 setup.
+Use the branches to progress across levels.
 
 ## Prerequisites
 * run `yarn install` to install all dependencies
