@@ -1,13 +1,1 @@
-<form class="search"
-      [formGroup]="form"
-      (submit)="submit()">
-    <nc-typeahead name="search"
-                  formControlName="search"
-                  [service]="showService"
-                  placeholder="Search">
-    </nc-typeahead>
-    <nc-button type="submit">Go</nc-button>
-</form>
-
-<router-outlet></router-outlet>
-<nc-loader [isLoading]="isLoading"></nc-loader>
+<h1> {{ title }} </h1>
