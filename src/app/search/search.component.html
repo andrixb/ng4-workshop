@@ -1,4 +1,8 @@
-<form>
-    <label class="search__label">Search: </label>
-    <input class="search__input" type="text" name="search">
-</form>
+<section>
+        <span class="right">
+            <button (click)="getArticles()">refresh</button>
+        </span>
+</section>
+<section class="search__feedContainer">
+    <news-card *ngFor ="let feed of feeds" [feed]="feed"></news-card>
+</section>

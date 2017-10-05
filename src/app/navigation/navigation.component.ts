@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-    items = ['home', 'search'];
+    items: string[] = ['home', 'search'];
 }
