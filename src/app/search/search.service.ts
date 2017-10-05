@@ -5,7 +5,7 @@ import { Feed } from './search.model';
 
 @Injectable()
 export class SearchService {
-    private API_KEY: string = '';
+    private API_KEY: string = '0b083d8f-3df0-4714-9759-372d7602b385';
     private API_CALL: string = `https://content.guardianapis.com/search?api-key=${this.API_KEY}`;
 
     constructor(private _http: Http) {}
@@ -26,5 +26,5 @@ export class SearchService {
             error.status ? `${error.status} - ${error.statusText}` : 'Server error';
         console.error(errMsg); // log to console instead
         return Observable.throw(errMsg);
-      }
+    }
 }

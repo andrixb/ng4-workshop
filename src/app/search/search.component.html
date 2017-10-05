@@ -1,7 +1,7 @@
 <section>
-        <span class="right">
-            <button (click)="getArticles()">refresh</button>
-        </span>
+    <span class="right">
+        <button (click)="getArticles()">refresh</button>
+    </span>
 </section>
 <section class="search__feedContainer">
     <news-card *ngFor ="let feed of feeds" [feed]="feed"></news-card>
