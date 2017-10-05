@@ -1,7 +1,7 @@
 <nav class="navigation__container">
     <ul class="navigation__listContainer">
         <li class="navigation__listItem" *ngFor="let item of items"> 
-            <a class="navigation__listLink" href="{{ item }}">{{ item }}</a>
+            <a class="navigation__listLink" routerLink="{{ item }}">{{ item }}</a>
         </li>
     </ul>
 </nav>
