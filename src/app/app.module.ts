@@ -3,6 +3,8 @@ import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
+import { TruncatePipe } from './shared/truncate.pipe';
+
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SearchComponent } from './search/search.component';
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
         NavigationComponent,
         SearchComponent,
         NewsCardComponent,
+        TruncatePipe,
     ],
     bootstrap: [
         AppComponent,

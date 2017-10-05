@@ -1,6 +1,6 @@
 <article class="news-card__container">
     <h3>
-       <a href="{{feed.webUrl}}"> {{feed.webTitle}} </a>
+       <a href="{{feed.webUrl}}"> {{feed.webTitle | limitChar:150}} </a>
     </h3>
     <h4>{{feed.sectionName}} - {{feed.webPublicationDate | date:'dd-MM-yyyy'}}</h4>
 </article>
